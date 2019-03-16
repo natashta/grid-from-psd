@@ -209,7 +209,7 @@ h2 {
   color: white;
   font-size: 32px;
   grid-column: 3 / span 2;
-  padding: 6rem 4rem;
+  padding: 6rem 0 0 4rem;
 }
 
 .itunes p {
@@ -444,6 +444,7 @@ nav {
 
   main.grid-wrapper>section.one {
     grid-column: 1;
+    padding-left: 4rem;
   }
   main.grid-wrapper>section.two {
     grid-column: 2;
@@ -453,5 +454,11 @@ nav {
   }
   main.grid-wrapper footer>section {
     padding-left: 2rem;
+  }
+  main.grid-wrapper>section p {
+    font-size: 18px;
+  }
+  main.grid-wrapper>section .btn {
+    width: 90%;
   }
 }
