@@ -4,20 +4,16 @@ body {
 
 a{color: white;}
 
-
-/*шрифты, ширина кнопок и футер 1200рх
-остальное 800рх
-*/
-
 .grid-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
   display: grid;
   grid-template-rows:  900px  repeat(6, 500px) 600px;
   grid-template-columns: repeat(4, 1fr);
 }
 
 footer {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 1 /-1;
   display: grid;
   grid-template-columns: 2fr 1fr 3fr;
   grid-template-rows: 1fr 1fr;
@@ -68,7 +64,7 @@ header{
   grid-row:    1 / 2;
   grid-column: 1 / -1;
   background-image: url(src/head.png);
-  background-position: top center;
+  background-position: 80% center;
   padding: 5rem 3rem;
   position: relative;
 }
@@ -94,8 +90,8 @@ header::after {
   bottom: 0;
   right: 0;
   border: 450px solid transparent;
-  border-right: 450px solid rgba(52, 150, 160, 0.5);
-  border-bottom: 450px solid rgba(52, 150, 160, 0.5);
+  border-right: 450px solid rgba(52, 150, 160, 0.2);
+  border-bottom: 450px solid rgba(52, 150, 160, 0.2);
  }
 
 .img_about {
@@ -103,8 +99,8 @@ header::after {
   background-position: center center;
   grid-column: 1 / span 2;
   position: relative;
-  -webkit-filter: contrast(5);
-  filter: contrast(5);
+  -webkit-filter: contrast(4);
+  filter: contrast(4);
 }
 
 .img_about::before {
@@ -115,7 +111,7 @@ header::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(145, 38, 44, 0.64);
+  background-color: rgba(155, 36, 42, 0.6);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -349,7 +345,7 @@ nav {
 }
 .nav__showmenu {
     position: relative;
-    z-index: 3;
+    z-index: 10;
     display: inline-block;
     padding: 0;
 	  margin: auto;
@@ -397,3 +393,65 @@ nav {
 .nav__check:checked+.nav__showmenu {color:#fff;}
 .nav__check:checked+.nav__showmenu>p {display: none;}
 .nav__check:checked~.menu {transform: translateX(0);}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  section.about p, section.instagram p, section.spotify p, section.itunes p {
+    font-size: 28px;
+  }
+  footer {
+    height: 900px;
+  }
+  .footer1 {
+    padding-left: 2rem;
+  }
+  .footer5 div.sponsor {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .footer3 form>input {
+    font-size: 10px;
+  }
+  i.fas.fa-arrow-right {
+    display: none;
+  }
+  
+  section.music_text {
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+  section.music_text .btn {
+    width: 90%;
+    
+  }
+  section.music_text p {
+    font-size: 16px;
+  }
+  section.instagram, section.spotify, section.itunes {
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+  @media (min-width: 320px) and (max-width: 799px) {
+.grid-wrapper {
+  grid-template-rows: 966px repeat(6, 540px) 100vh;
+  grid-template-columns: 50% 50%;
+  }
+
+  .background_blue, .music_background_contaner {
+    display: none;
+  }
+
+  main.grid-wrapper>section.one {
+    grid-column: 1;
+  }
+  main.grid-wrapper>section.two {
+    grid-column: 2;
+  }
+  section.img_music.two {
+    grid-row: 5;
+  }
+  main.grid-wrapper footer>section {
+    padding-left: 2rem;
+  }
+}
