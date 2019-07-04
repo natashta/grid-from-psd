@@ -281,19 +281,19 @@ a.play {
 }
 
 .instagram a.ddott:hover {
-  box-shadow:inset 400px 0 0 0 rgba(46,83,113,0.6);
+  box-shadow:inset 600px 0 0 0 rgba(46,83,113,0.6);
 }
 
 .music_text a.ddott:hover {
-  box-shadow:inset 400px 0 0 0 rgba(67,72,79,0.6);
+  box-shadow:inset 600px 0 0 0 rgba(67,72,79,0.6);
 }
 
 .spotify a.ddott:hover {
-  box-shadow:inset 400px 0 0 0 rgba(31,126,59,0.6);
+  box-shadow:inset 600px 0 0 0 rgba(31,126,59,0.6);
 }
 
 .itunes a.ddott:hover {
-  box-shadow:inset 400px 0 0 0 rgba(85,91,100,0.6);
+  box-shadow:inset 600px 0 0 0 rgba(85,91,100,0.6);
 }
 
 form {
